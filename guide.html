@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User guide · AnvilDroid</title>
+  <meta name="description" content="How to use AnvilDroid: first start, apps, devices, Android images, device settings, game controls, ADB, themes, updates and troubleshooting.">
+  <meta name="theme-color" content="#0b1322">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://anvildroid.github.io/guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AnvilDroid user guide">
+  <meta property="og:description" content="Set up Android, manage devices, run apps, map game controls and make AnvilDroid your own.">
+  <meta property="og:url" content="https://anvildroid.github.io/guide.html">
+  <meta property="og:image" content="https://anvildroid.github.io/assets/apps.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="guide.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to the guide</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="AnvilDroid home">
+        <img src="assets/icon.png" alt="" width="36" height="36">
+        <span>Anvil<b>Droid</b></span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#install">Install</a>
+        <a href="guide.html" aria-current="page">User guide</a>
+        <a href="index.html#faq">FAQ</a>
+        <a class="gh" href="https://github.com/anvildroid/anvildroid" aria-label="AnvilDroid on GitHub">
+          <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="guide-hero">
+      <div class="wrap">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> User guide</p>
+        <h1>Using <em>AnvilDroid</em></h1>
+        <p class="lead">Set up Android, manage your devices, run apps, map game controls and make the app your own.
+          Not installed yet? Start with the <a href="index.html#install">install guide</a>.</p>
+      </div>
+    </section>
+
+    <div class="wrap guide-layout">
+      <nav class="toc" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ol>
+          <li><a href="#basics">The basics</a></li>
+          <li><a href="#first-start">First start</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#devices">Devices</a></li>
+          <li><a href="#images">Android images</a></li>
+          <li><a href="#device-settings">Device settings</a></li>
+          <li><a href="#game-controls">Game controls</a></li>
+          <li><a href="#adb">Developer (ADB)</a></li>
+          <li><a href="#settings">Settings and themes</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+        </ol>
+      </nav>
+
+      <article id="content" class="guide">
+        <section id="basics">
+          <h2>The basics</h2>
+          <p>The sidebar has four pages: <b>Apps</b>, <b>Devices</b>, <b>Game Controls</b> and <b>Settings</b>.</p>
+          <p>A <b>device</b> is one isolated Android system with its own apps, data and settings. Under the hood it is a Waydroid
+            runtime. You can run several devices side by side, for example one for games and one for work.
+            If you already use Waydroid, AnvilDroid lists it as <b>System Waydroid</b>.</p>
+        </section>
+
+        <section id="first-start">
+          <h2>First start</h2>
+          <figure class="shot"><img src="assets/quick-start.png" alt="Get started guide on the Apps page" loading="lazy" width="1920" height="1200"></figure>
+          <p>When no device exists yet, the Apps page shows <b>Get started</b>:</p>
+          <ol class="guide-steps">
+            <li><b>Download Android.</b> Fetches and verifies the official Android 13 image (about 1 GB, no Google apps).
+              If the Waydroid tools are missing, this step shows <b>Open setup</b> instead, which installs them.</li>
+            <li><b>Create and start.</b> Creates a device called “My Android” and boots it. The first start takes a few minutes
+              while the image is prepared.</li>
+            <li><b>Install APK.</b> Available once the device is running.</li>
+          </ol>
+          <p>You can keep using the app while a step runs.</p>
+        </section>
+
+        <section id="apps">
+          <h2>Apps</h2>
+          <figure class="shot"><img src="assets/apps.png" alt="App library with apps from a running device" loading="lazy" width="1920" height="1200"></figure>
+          <ul>
+            <li><b>Open an app</b> by clicking it. Every Android app opens in its own desktop window.
+              The <b>Waydroid</b> tile opens that device's full Android UI instead.</li>
+            <li><b>Install an APK:</b> click <b>Install APK</b>, choose the file, then pick one or more running devices.</li>
+            <li><b>Device chips</b> above the grid show each device's state and app count. A stopped device has its own <b>Start</b> button.</li>
+            <li><b>Find apps:</b> search with <kbd>Ctrl</kbd>+<kbd>K</kbd>, filter by device or tag, or turn on <b>Favorites only</b>.
+              Click the heart on a tile to favorite it. The <b>+</b> button next to the tag filter creates and manages tags.</li>
+            <li><b>Grid or list:</b> switch with the two buttons at the right of the filter bar. Apps from several devices are grouped per device.</li>
+            <li><b>Right-click an app</b> for App details, Android App Info, Compatibility… (per-app <i>Fake Wi-Fi</i> and <i>Mouse as touch</i>),
+              Force-stop…, Create/update menu shortcut and Uninstall….</li>
+          </ul>
+          <p class="note-box">Only apps from running devices are listed. New apps get a shortcut in your desktop's application menu
+            automatically; you can turn that off in Settings.</p>
+        </section>
+
+        <section id="devices">
+          <h2>Devices</h2>
+          <figure class="shot"><img src="assets/devices.png" alt="Devices page with live usage" loading="lazy" width="1920" height="1200"></figure>
+          <p>The Devices page has three tabs: <b>Devices</b>, <b>Android images</b> and <b>Developer (ADB)</b>.</p>
+          <ul>
+            <li><b>Create a device:</b> open <b>+ New device</b>, enter a name, choose an image and click <b>Create device</b>.
+              You need an <a href="#images">image</a> first.</li>
+            <li><b>Row actions:</b> Start or Stop, Restart, <b>Open Waydroid</b> (the full Android UI) and <b>Settings</b>.
+              Tick several rows to start, stop or restart them together.</li>
+            <li><b>Quick switches:</b> the two menus under each name change the device identity (for example Pixel 8 Pro) and the GPU.
+              A running device restarts to apply them.</li>
+            <li><b>Usage</b> shows memory, CPU, disk and GPU while a device runs.</li>
+            <li>The <b>Default</b> tag marks the device used when nothing else is chosen. Change it with <b>Set as default</b> in the device's settings.</li>
+            <li><b>Troubleshoot</b> shows setup checks and <b>Restart controller</b>.</li>
+          </ul>
+        </section>
+
+        <section id="images">
+          <h2>Android images</h2>
+          <p>The <b>Android images</b> tab lists the images you can create devices from.</p>
+          <ul>
+            <li><b>Official images:</b> download Waydroid VANILLA (no Google apps) or GAPPS (with Google Play). Downloads are verified before use.</li>
+            <li><b>Import custom image…:</b> use your own <code>system.img</code> and <code>vendor.img</code> from a folder, a ZIP file or a URL.
+              ext4, EROFS and SquashFS work. Custom images are experimental.</li>
+            <li><b>Create device</b> starts a new device from an image. <b>Reinstall</b> replaces the Android system of a stopped device
+              and erases its apps and data.</li>
+          </ul>
+        </section>
+
+        <section id="device-settings">
+          <h2>Device settings</h2>
+          <figure class="shot"><img src="assets/device-settings.png" alt="Device settings with categories on the left" loading="lazy" width="1920" height="1200"></figure>
+          <p>Open a device's <b>Settings</b> from the Devices page and pick a category on the left. <b>Simple</b> shows the common categories;
+            <b>Advanced</b> adds storage, display backend, diagnostics and exact RAM/CPU limits. The buttons at the top set the default device,
+            rename, reinstall or delete it. Stop a device before deleting it.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Category</th><th scope="col">What it does</th></tr></thead>
+              <tbody>
+                <tr><td>Graphics</td><td>Choose the GPU, or Automatic. Saving restarts Android.</td></tr>
+                <tr><td>Display</td><td>Desktop windows (one window per app) or the full Android UI. One mode at a time.</td></tr>
+                <tr><td>Performance</td><td>RAM and CPU limits, with presets from Light to Unlimited.</td></tr>
+                <tr><td>Notifications</td><td>Show Android notifications on your desktop; turn them off per app.</td></tr>
+                <tr><td>Camera</td><td>Pass one or more of this computer's cameras to Android.</td></tr>
+                <tr><td>Device identity</td><td>Spoof the device model (Pixel, Galaxy, ROG Phone…). Some apps behave differently per model.</td></tr>
+                <tr><td>Google Play</td><td>Help with Play Protect registration on GAPPS images.</td></tr>
+                <tr><td>ARM translation</td><td>Install libndk_translation or libhoudini to run ARM-only apps.</td></tr>
+                <tr><td>Storage <span class="tag">Advanced</span></td><td>Where the device's data lives and moving it to another disk. <b>Shared folders</b> from your home appear under <code>/sdcard/AnvilDroid</code>.</td></tr>
+                <tr><td>Managed copy <span class="tag">Advanced</span></td><td>Import System Waydroid's apps and data into a separate device.</td></tr>
+                <tr><td>Diagnostics <span class="tag">Advanced</span></td><td>Session details and <b>Export report</b>, a JSON file for bug reports.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="game-controls">
+          <h2>Game controls</h2>
+          <figure class="shot"><img src="assets/game-controls.png" alt="Game Controls page with control schemes" loading="lazy" width="1920" height="1200"></figure>
+          <p>Map your keyboard and mouse to touch in any Android app or game.</p>
+          <ol class="guide-steps">
+            <li>Open the app, then press <kbd>F2</kbd> (or the window's header menu → <b>Edit keymap</b>). An editor opens on top of the app.</li>
+            <li>Add controls where the game expects touches: tap, hold, joystick (WASD), swipe, repeat, skill, macro, aim,
+              mouse-to-touch and FPS mouse look.</li>
+            <li>Save. The controls work whenever that app has focus.</li>
+          </ol>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
+              <tbody>
+                <tr><td><kbd>F2</kbd></td><td>Edit keymap</td></tr>
+                <tr><td><kbd>F3</kbd></td><td>Turn the controls on or off, for example to type in chat</td></tr>
+                <tr><td><kbd>F4</kbd></td><td>Show or hide the control markers</td></tr>
+                <tr><td><kbd>Esc</kbd></td><td>Cancel editing</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The <b>Game Controls</b> page lists every app with saved controls, per device. Open <b>Schemes</b> under an app to keep several layouts:</p>
+          <ul>
+            <li><b>Use</b> makes the selected scheme active.</li>
+            <li><b>New</b>, <b>Clone</b> and <b>Rename</b> use the name typed in <b>New name</b>.</li>
+            <li><b>Export</b> saves a scheme as an AnvilDroid JSON file; <b>Import…</b> loads one.</li>
+            <li><b>Reset</b> clears the selected scheme. <b>Remove</b> deletes a custom scheme that is not active; Default cannot be removed.</li>
+          </ul>
+          <p class="note-box">Save or cancel the editor in the app window before changing schemes. <b>Touch diagnostics</b> installs a
+            small probe app so you can check that touches arrive.</p>
+        </section>
+
+        <section id="adb">
+          <h2>Developer (ADB)</h2>
+          <p>The <b>Developer (ADB)</b> tab connects a running device to ADB so Android Studio can see it. Click <b>Connect</b> for a device,
+            select it in Android Studio and approve USB debugging in Android if asked. Under <b>Android SDK</b> you can point to the same
+            <code>adb</code> that Android Studio uses. Connections stay on this computer and end when the device or controller stops.</p>
+        </section>
+
+        <section id="settings">
+          <h2>Settings and themes</h2>
+          <figure class="shot"><img src="assets/appearance.png" alt="Appearance settings with themes and accent colours" loading="lazy" width="1920" height="1200"></figure>
+          <ul>
+            <li><b>Theme:</b> <b>Classic</b> (rounded, calm) or <b>HUD</b> (square, high-contrast game look). Both have the same pages and controls.</li>
+            <li><b>Light or dark:</b> System follows your desktop, or pick one.</li>
+            <li><b>Accent colour:</b> Blue, Forge, Toxic, Crimson, Synthwave or Ice.</li>
+            <li><b>Updates:</b> <b>Check for updates</b> downloads the right package for your system after you confirm, then restarts AnvilDroid.
+              If you installed from the package repository, your normal system update works too.</li>
+            <li><b>Minimize to panel</b>, <b>Auto startup</b>, <b>Startup minimize</b> and automatic menu shortcuts for new apps.</li>
+            <li><b>Start at login:</b> choose which devices start when you log in.</li>
+          </ul>
+          <figure class="shot"><img src="assets/theme-hud.png" alt="App library in the HUD theme with the Forge accent" loading="lazy" width="1920" height="1200">
+            <figcaption>The HUD theme with the Forge accent.</figcaption></figure>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li><b>A device does not start:</b> open <b>Devices → Troubleshoot</b> to see what is missing. Use <b>Restart controller</b> if the service looks stuck.</li>
+            <li><b>An app misbehaves:</b> right-click it → <b>Force-stop…</b> and open it again. Apps that need Wi-Fi or treat the mouse oddly can be
+              adjusted under <b>Compatibility…</b>.</li>
+            <li><b>Banking apps, some games or DRM video refuse to run:</b> they usually require Play Integrity, which Waydroid cannot pass.</li>
+            <li><b>Report a bug:</b> in the device's settings, switch to Advanced, open <b>Diagnostics → Export report</b> and attach the file to a
+              <a href="https://github.com/anvildroid/anvildroid/issues">GitHub issue</a>.</li>
+          </ul>
+          <p>More about limits and hardware support:
+            <a href="https://github.com/anvildroid/anvildroid/blob/main/docs/TECHNICAL.md#compatibility-and-limitations">compatibility and limitations</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="brand small">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        <span>Anvil<b>Droid</b></span>
+      </div>
+      <p>MIT licensed. Built on <a href="https://waydro.id">Waydroid</a>, AOSP, LineageOS, Mesa and Tauri.
+        Android is a trademark of Google LLC. This project is not affiliated with Google or the Waydroid project.</p>
+      <nav aria-label="Project links">
+        <a href="https://github.com/anvildroid/anvildroid">Source</a>
+        <a href="https://github.com/anvildroid/anvildroid/releases">Releases</a>
+        <a href="https://github.com/anvildroid/anvildroid/issues">Report a problem</a>
+        <a href="https://github.com/anvildroid/anvildroid/blob/main/docs/TECHNICAL.md">Technical guide</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

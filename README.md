@@ -1,6 +1,6 @@
 # anvildroid.github.io
 
-Website for [AnvilDroid](https://github.com/anvildroid/anvildroid): features and install guide.
+Website for [AnvilDroid](https://github.com/anvildroid/anvildroid): features, install guide and user guide (`guide.html`).
 Served by GitHub Pages at https://anvildroid.github.io/.
 
 Plain HTML, CSS and JavaScript; no build step. Preview locally:
